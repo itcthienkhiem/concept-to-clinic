@@ -73,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'backend.static.context_processors.settings_context',
             ],
         },
     },
@@ -128,5 +129,5 @@ REST_FRAMEWORK = {
 try:
     with open('/HEAD') as f:
         APP_VERSION_NUMBER = f.readlines()[-1].split(' ')[1][:7]
-except:
+except (IOError, IndexError):
     APP_VERSION_NUMBER = '(unknown)'
