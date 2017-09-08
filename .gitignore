@@ -35,6 +35,7 @@ htmlcov/
 
 # workspace files are user-specific
 *.sublime-workspace
+.vscode
 
 # npm
 node_modules/
